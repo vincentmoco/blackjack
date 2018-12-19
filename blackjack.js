@@ -22,20 +22,25 @@ le jeu blackjack
  var change = function changeImg(){
 	var ext = '.BMP';
 	var racine = '/Users/mocovincent/Documents/2018-2019/blackjack/img/';
-	var liste_chemin = [];
 	for (i = 1; i <= 52; i++) {	
 		var chemin = i;
 		liste_chemin.push(chemin)	
 	}
 	var val_carte = liste_chemin[Math.floor(Math.random()*liste_chemin.length)];
 	var carte_joueur =( racine + val_carte.toString() + ext);
+	liste_chemin.splice(val_carte-1,1);
 	return carte_joueur;
 }
+
+
+/*
+liste_chemin.splice(val_carte-1) pour eviter les doublons mais il y a un bug quand meme
+*/
 
 //Boucle
 
 var element = document.getElementById('vos_cartes');
-var element_2 = 
+var liste_chemin = [];
 	
 element.addEventListener('click',function ajoutImgDansDiv() {
     var chemin = change();
