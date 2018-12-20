@@ -12,7 +12,7 @@ le jeu blackjack
 }
 
  var ajout = function ajoutImgDansDiv() {
-    var chemin = '/Users/mocovincent/Documents/2018-2019/blackjack/img/50.BMP'
+    var chemin ='/Users/mocovincent/Documents/2018-2019/blackjack/img/30.BMP' ; 
     var newImg = creerImg(chemin);
 	var divJS = document.getElementById('carte_banque');
     divJS.appendChild(newImg);
@@ -40,6 +40,12 @@ liste_chemin.splice(val_carte-1) pour eviter les doublons mais il y a un bug qua
 var liste_chemin = [];
 var element = document.getElementById('ajout_joueur');	
 var element2 = document.getElementById('ajout_banque');	
+
+var carte_depart_banque = document.getElementById('carte_1');
+var carte_depart_joueur = document.getElementById('carte_2');
+
+carte_depart_banque.src=change(liste_chemin);
+carte_depart_joueur.src=change(liste_chemin); 
 
 
 element.addEventListener('click',function ajoutImgDansDiv() {
