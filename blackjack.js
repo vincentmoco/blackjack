@@ -19,7 +19,7 @@ le jeu blackjack
 }
 
 
- var change = function changeImg(){
+ var change = function changeImg(liste_chemin){
 	var ext = '.BMP';
 	var racine = '/Users/mocovincent/Documents/2018-2019/blackjack/img/';
 	for (i = 1; i <= 52; i++) {	
@@ -32,27 +32,29 @@ le jeu blackjack
 	return carte_joueur;
 }
 
-
 /*
 liste_chemin.splice(val_carte-1) pour eviter les doublons mais il y a un bug quand meme
 */
 
-//Boucle
-
-var element = document.getElementById('vos_cartes');
+//PROGRAMME PRINCIPALE
 var liste_chemin = [];
-	
+var element = document.getElementById('ajout_joueur');	
+var element2 = document.getElementById('ajout_banque');	
+
+
 element.addEventListener('click',function ajoutImgDansDiv() {
-    var chemin = change();
-    var chemin_2 = change();
+    var chemin = change(liste_chemin);
     var newImg = creer(chemin);
-    var newImg_2 = creer(chemin_2);
-	var divJS = document.getElementById('carte_banque');
-	var divJS_2 = document.getElementById('carte_joueur');
+	var divJS = document.getElementById('carte_joueur');
     divJS.appendChild(newImg);
-    divJS_2.appendChild(newImg_2);
 });
 
 	
+element2.addEventListener('click',function ajoutImgDansDiv() {
+    var chemin = change(liste_chemin);
+    var newImg = creer(chemin);
+	var divJS = document.getElementById('carte_banque');
+    divJS.appendChild(newImg);
+});
 
         
