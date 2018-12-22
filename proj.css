@@ -1,0 +1,22 @@
+.titre {
+	text-align: center;
+}
+
+.table {
+	position: relative;
+	left:5%;
+	height: 520px;
+	background-image: url("img/table.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.jeu {	position: absolute;
+	top: 15%;
+	left: 20%;
+	}
+
+.cartes {
+	position:relative;
+	left:7%;
+}
+
