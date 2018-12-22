@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title> Blackjack</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="proj.css"/>
+	</head>
+	
+	<body>
+		<h1 class="titre">Marathon jack</h1>
+		
+		<div class="table">
+
+			<div class="jeu">
+	
+				<div class="banque"> 		
+					<h3 class="txt_banque"> Les cartes de la banque</h3>
+					<span class="cartes" id="cartes_banque">
+						<img src="img/30.BMP" id="carte_banque_1"/>
+					</span>
+				</div>
+			
+				<div class="joueur">
+					<h3 class="txt_joueur">Vos cartes</h3>
+					<span class="cartes" id="cartes_joueur">
+						<img src="img/15.BMP" id="carte_joueur_1"/>
+					</span>		
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="annonce" align="center">
+			<p>The dealer has <strong id="points_banque"> 0 </strong> points</p>
+			<p> You have <strong id="points_joueur"> 0 </strong> points. Card or stay?</p>
+		</div>
+		
+		<div class="bouton" align="center">
+			<button type="submit" id="ajout_joueur"> Carte </button>
+			<button type="submit" id="ajout_banque"> Reste </button>
+			<button type="submit"> Rejouer </button>
+		</div>
+		<script type="text/javascript" src="proj.js"></script>
+	</body>
+</html>
